@@ -1,4 +1,4 @@
-$primary: #6B42A0;
+$primary: #2d8ecb;
 
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
@@ -12,8 +12,10 @@ $theme-colors: (
 
 $font-family-base: "Open Sans", #{$font-family-sans-serif};
 
-// $breadcrumb-font-size:     0.8rem;
-// $breadcrumb-bg:            $gray-100;
+$breadcrumb-font-size:     0.9rem;
+$breadcrumb-bg:            $primary;
+$breadcrumb-divider-color: #ffffff;
+$breadcrumb-active-color:  #ffffff;
 // $breadcrumb-border-radius: 0;
 
 // $navbar-light-color:                $gray-600;
@@ -60,3 +62,13 @@ $font-family-base: "Open Sans", #{$font-family-sans-serif};
 @import 'bootstrap/scss/spinners';
 @import 'bootstrap/scss/utilities';
 @import 'bootstrap/scss/print';
+
+/* Utils */
+@import 'utils/icons.scss';
+
+/* Layout */
+@import 'layout/body';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/options';

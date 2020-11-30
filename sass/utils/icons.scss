@@ -1,0 +1,10 @@
+@mixin icon() {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+@mixin icon-home($color) {
+    @include icon();
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22#{str-replace(inspect($color), '#', '%23')}%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22arcs%22%3E%3Cpath%20d%3D%22M20%209v11a2%202%200%200%201-2%202H6a2%202%200%200%201-2-2V9%22%2F%3E%3Cpath%20d%3D%22M9%2022V12h6v10M2%2010.6L12%202l10%208.6%22%2F%3E%3C%2Fsvg%3E");
+}

@@ -1,0 +1,7 @@
+body {
+    @extend .container;
+}
+
+#ds-main {
+    @extend .row;
+}
