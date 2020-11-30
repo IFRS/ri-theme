@@ -59,8 +59,8 @@
                 <map:select type="browser">
                     <map:when test="explorer">
                         <map:transform type="IncludePageMeta">
-                            <map:parameter name="stylesheet.screen#1" value="lib/fonts.css"/>
-                            <map:parameter name="stylesheet.screen#2" value="lib/style.css"/>
+                            <map:parameter name="stylesheet.screen#1" value="lib/css/fonts.css"/>
+                            <map:parameter name="stylesheet.screen#2" value="lib/css/style.css"/>
 
                             <map:parameter name="javascript#1" value="lib/js/commons.js"/>
                             <map:parameter name="javascript#2" value="lib/js/script-ie.js"/>
@@ -72,8 +72,8 @@
                     </map:when>
                     <map:otherwise>
                         <map:transform type="IncludePageMeta">
-                            <map:parameter name="stylesheet.screen#1" value="lib/fonts.css"/>
-                            <map:parameter name="stylesheet.screen#2" value="lib/style.css"/>
+                            <map:parameter name="stylesheet.screen#1" value="lib/css/fonts.css"/>
+                            <map:parameter name="stylesheet.screen#2" value="lib/css/style.css"/>
 
                             <map:parameter name="javascript#1" value="lib/js/commons.js"/>
                             <map:parameter name="javascript#2" value="lib/js/script.js"/>

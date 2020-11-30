@@ -33,13 +33,13 @@ gulp.task('sass', function() {
     }).on('error', sass.logError))
     .pipe(postcss(postCSSplugins))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/lib/'));
+    .pipe(gulp.dest('dist/lib/css/'));
 });
 
 gulp.task('styles', gulp.series('sass', function css() {
-    return gulp.src(['dist/lib/*.css'])
+    return gulp.src(['dist/lib/css/*.css'])
     .pipe(csso())
-    .pipe(gulp.dest('dist/lib/'));
+    .pipe(gulp.dest('dist/lib/css/'));
 }));
 
 gulp.task('webpack', function(done) {
@@ -51,7 +51,7 @@ gulp.task('webpack', function(done) {
             'script': './src/script.js',
         },
         output: {
-            path: path.resolve(__dirname, 'dist/lib'),
+            path: path.resolve(__dirname, 'dist/lib/js/'),
             filename: '[name].js',
         },
         resolve: {
@@ -95,7 +95,7 @@ gulp.task('webpack', function(done) {
 });
 
 gulp.task('scripts', gulp.series('webpack', function js() {
-    return gulp.src(['dist/lib/*.js'])
+    return gulp.src(['dist/lib/js/*.js'])
     .pipe(babel({
         presets: [
             [
@@ -107,8 +107,13 @@ gulp.task('scripts', gulp.series('webpack', function js() {
     .pipe(uglify({
         ie8: true,
     }))
-    .pipe(gulp.dest('dist/lib/'));
+    .pipe(gulp.dest('dist/lib/js/'));
 }));
+
+gulp.task('images', function() {
+    return gulp.src(['images/**/*'])
+    .pipe(gulp.dest('dist/images/'));
+})
 
 gulp.task('copy', function() {
     return gulp.src([
@@ -117,14 +122,16 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'webpack'), 'copy'));
+gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'webpack'), 'images', 'copy'));
 
-gulp.task('build-production', gulp.series('clean', gulp.parallel('styles', 'scripts'), 'copy'));
+gulp.task('build-production', gulp.series('clean', gulp.parallel('styles', 'scripts'), 'images', 'copy'));
 
 gulp.task('default', gulp.series('build', function watch() {
     gulp.watch('sass/**/*.scss', gulp.series('sass'));
 
     gulp.watch('src/**/*.js', gulp.series('webpack'));
+
+    gulp.watch('images/**/*', gulp.series('images'));
 
     gulp.watch('xmlui/**/*', gulp.series('dist'));
 }));
