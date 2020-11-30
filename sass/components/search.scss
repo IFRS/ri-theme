@@ -1,0 +1,18 @@
+#ds-search-option-head {
+    @extend .sr-only;
+}
+
+#ds-search-form {
+    @extend .form-inline;
+
+    margin-bottom: 15px;
+
+    .ds-text-field {
+        @extend .form-control;
+    }
+
+    .ds-button-field {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}

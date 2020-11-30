@@ -1,0 +1,42 @@
+.ds-option-set-head {
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ds-options-list {
+    list-style: none;
+    padding: 0;
+
+    a {
+        display: block;
+    }
+}
+
+.ds-sublist-head {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.ds-simple-list {
+    @extend .list-group;
+
+    > li {
+        @extend .list-group-item;
+    }
+}
+
+#ds-feed-option {
+    ul {
+        @extend .list-group;
+
+        > li {
+            @extend .list-group-item;
+        }
+    }
+
+    a {
+        background-position: left center;
+        padding-left: 20px;
+    }
+}

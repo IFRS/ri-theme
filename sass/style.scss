@@ -72,3 +72,7 @@ $breadcrumb-active-color:  #ffffff;
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/options';
+
+/* Components */
+@import 'components/menu.scss';
+@import 'components/search.scss';
