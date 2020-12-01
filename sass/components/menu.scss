@@ -4,8 +4,13 @@
     text-transform: uppercase;
 }
 
+.ds-option-set {
+    margin-bottom: 30px;
+}
+
 .ds-options-list {
     list-style: none;
+    margin: 0;
     padding: 0;
 
     a {
@@ -22,7 +27,12 @@
     @extend .list-group;
 
     > li {
-        @extend .list-group-item;
+        list-style: none;
+
+        > a {
+            @extend .list-group-item;
+            @extend .list-group-item-action;
+        }
     }
 }
 
@@ -31,7 +41,12 @@
         @extend .list-group;
 
         > li {
-            @extend .list-group-item;
+            list-style: none;
+
+            > a {
+                @extend .list-group-item;
+                @extend .list-group-item-action;
+            }
         }
     }
 
