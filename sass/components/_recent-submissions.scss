@@ -1,0 +1,18 @@
+.recent-submission {
+    ul {
+        @extend .list-group;
+        @extend .list-group-flush;
+
+        li {
+            @extend .list-group-item;
+        }
+    }
+}
+
+.recentSubmissionViewMore {
+    a {
+        @extend .btn;
+        @extend .btn-light;
+        @extend .btn-sm;
+    }
+}
