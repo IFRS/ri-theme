@@ -10,22 +10,13 @@ $theme-colors: (
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
-$font-family-base: "Open Sans", #{$font-family-sans-serif};
+$font-family-base:         "Open Sans", #{$font-family-sans-serif};
 
 $breadcrumb-font-size:     0.9rem;
 $breadcrumb-bg:            $primary;
 $breadcrumb-divider-color: #ffffff;
 $breadcrumb-active-color:  #ffffff;
-// $breadcrumb-border-radius: 0;
-
-// $navbar-light-color:                $gray-600;
-// $navbar-light-hover-color:          $primary;
-// $navbar-light-active-color:         $primary;
-// $navbar-light-toggler-border-color: transparent;
-
-// @import 'vars';
-// @import 'functions';
-// @import 'mixins';
+$breadcrumb-border-radius: 0;
 
 /* Bootstrap */
 @import 'bootstrap/scss/root';
@@ -77,4 +68,5 @@ $breadcrumb-active-color:  #ffffff;
 @import 'components/community';
 @import 'components/heading';
 @import 'components/menu.scss';
+@import 'components/recent-submissions';
 @import 'components/search.scss';
