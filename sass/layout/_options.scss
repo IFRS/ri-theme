@@ -3,4 +3,14 @@
     @extend .col-md-4;
 
     background-color: $gray-100;
+    background-image: url('../../images/bg-light.png');
+    background-repeat: repeat;
+    background-position: left center;
+    background-origin: content-box;
+    background-clip: content-box;
+
+    > * {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

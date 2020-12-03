@@ -36,13 +36,10 @@
 #ds-trail {
     @extend .breadcrumb;
 
-    @include icon-home(#ffffff);
-
-    background-position: 1rem center;
+    background: url('../../images/bg-primary.png') repeat left center;
     clear: both;
     color: #ffffff;
     margin-top: 1rem;
-    padding-left: 3rem;
 
     a {
         color: #ffffff;
@@ -51,6 +48,13 @@
 
     .ds-trail-link {
         @extend .breadcrumb-item;
+    }
+
+    .first-link {
+        @include icon-home(#ffffff);
+
+        background-position: left center;
+        padding-left: 2rem;
     }
 
     .last-link {
