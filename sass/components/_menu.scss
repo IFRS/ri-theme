@@ -26,6 +26,8 @@
 .ds-simple-list {
     @extend .list-group;
 
+    margin-bottom: 15px;
+
     > li {
         @extend .list-group-item;
 
@@ -41,19 +43,22 @@
 }
 
 #ds-feed-option {
+    padding-left: 2px;
+    text-align: center;
+
     ul {
         font-size: 0.9rem;
         list-style: none;
         padding: 0;
 
         > li {
-            margin-bottom: 5px;
-            text-align: center;
+            display: inline-block;
+            margin: 5px;
         }
     }
 
     a {
         background-position: left center !important;
-        padding-left: 24px;
+        padding-left: 1.25rem;
     }
 }
