@@ -1,3 +1,48 @@
 #ds-footer {
     @extend .col-12;
+
+    align-items: center;
+    background: $gray-100;
+    background-clip: content-box;
+    background-origin: content-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    > * {
+        margin: 15px;
+    }
+}
+
+#ds-footer-logo {
+    flex: 0 0 150px;
+    margin-right: 15px;
+
+    a {
+        display: block;
+    }
+
+    img {
+        @extend .img-fluid;
+    }
+}
+
+#ds-footer-links {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+#ds-footer-credits {
+    flex: 0 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    > * {
+        margin-bottom: 15px;
+    }
 }
