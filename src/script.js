@@ -8,3 +8,7 @@ require('picturefill');
 $(function() {
     picturefill();
 });
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
