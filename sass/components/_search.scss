@@ -3,23 +3,22 @@
 }
 
 #ds-search-form {
-    @extend .form-inline;
-
     margin: 30px 0;
-
-    fieldset {
-        @extend .input-group;
-    }
 
     .ds-text-field {
         @extend .form-control;
+
+        display: inline-block;
+        width: auto;
+    }
+
+    input[type=radio] {
+        margin-right: 5px;
     }
 
     .ds-button-field {
         @extend .btn;
         @extend .btn-primary;
-
-        @extend .input-group-append;
 
         @include icon-search(#ffffff);
 
