@@ -1,0 +1,11 @@
+.detail-view {
+    .ds-logo-wrapper {
+        float: left;
+        margin-right: 15px;
+        max-width: 40%;
+
+        .logo {
+            @extend .img-fluid;
+        }
+    }
+}
