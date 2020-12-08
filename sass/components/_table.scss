@@ -1,0 +1,7 @@
+.ds-table {
+    @extend .table;
+
+    .ds-table-header-row {
+        @extend .thead-light;
+    }
+}
