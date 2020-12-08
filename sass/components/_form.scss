@@ -1,0 +1,103 @@
+form.ds-interactive-div {
+    &:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .ds-div-head {
+        flex-basis: 100%;
+    }
+
+    .ds-paragraph {
+        @extend .form-group;
+        @extend .form-inline;
+
+        font-size: 0.9rem;
+
+        .ds-text-field,
+        .ds-select-field,
+        .ds-button-field {
+            margin: 5px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .ds-form-item {
+        @extend .form-group;
+        @extend .row;
+
+        .ds-form-label {
+            @extend .col-lg-3;
+            @extend .col-form-label;
+            @extend .col-form-label-sm;
+
+            margin-right: 0;
+        }
+
+        .ds-form-content {
+            @extend .col-lg-9;
+        }
+    }
+
+    .ds-form-list {
+        ul,
+        ol {
+            list-style: none;
+            padding: 0;
+        }
+    }
+
+    .ds-simple-list {
+        width: 100%;
+    }
+
+    .ds-form-label {
+        margin-right: 5px;
+    }
+
+    input {
+        &.error {
+            @extend .is-invalid;
+        }
+
+        &.ds-button-field {
+            @extend .btn;
+            @extend .btn-sm;
+
+            &[type=submit] {
+                @extend .btn-primary;
+            }
+        }
+
+        &.ds-text-field {
+            @extend .form-control;
+            @extend .form-control-sm;
+        }
+
+        &.ds-password-field {
+            @extend .form-control;
+            @extend .form-control-sm;
+        }
+    }
+
+    select.ds-select-field {
+        @extend .form-control;
+        @extend .form-control-sm;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .field-help {
+        @extend .text-muted;
+
+        font-size: 0.75rem;
+    }
+
+    .error {
+        @extend .invalid-feedback;
+    }
+}
