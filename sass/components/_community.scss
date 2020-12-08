@@ -1,26 +1,32 @@
 #aspect_artifactbrowser_CommunityBrowser_div_comunity-browser {
     > ul {
-        @extend .row;
+        @extend .card-columns;
 
         list-style: none;
         padding: 0;
 
         > li {
-            @extend .col-12;
-            @extend .col-sm-6;
-            @extend .col-lg-4;
+            @extend .card;
 
-            .bold > a {
-                border: 1px solid $gray-300;
-                color: $gray-800;
+            &:hover {
+                border-color: $primary;
+            }
+
+            .bold {
+                @extend .card-body;
                 display: block;
-                padding: 4rem 1rem;
-                text-align: center;
 
-                &:hover {
-                    border-color: $link-color;
-                    color: $link-hover-color;
-                    text-decoration: none;
+                a {
+                    @extend .card-link;
+                }
+
+                > ul {
+                    @extend .list-group;
+                    @extend .list-group-flush;
+
+                    > li {
+                        @extend .list-group-item;
+                    }
                 }
             }
         }
