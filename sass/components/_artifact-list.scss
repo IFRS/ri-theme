@@ -1,5 +1,18 @@
 .ds-artifact-list {
+    list-style: none;
     padding: 0;
+
+    .ds-artifact-item {
+        padding: 1rem;
+
+        &.odd {
+            background: $gray-100;
+        }
+    }
+
+    .artifact-title {
+        font-weight: 600;
+    }
 
     .artifact-info {
         color: $gray-700;
