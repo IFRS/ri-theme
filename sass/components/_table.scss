@@ -5,3 +5,11 @@
         @extend .thead-light;
     }
 }
+
+.ds-gloss-list {
+    @extend .table;
+}
+
+.ds-includeSet-table {
+    @extend .table;
+}
