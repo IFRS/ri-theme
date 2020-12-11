@@ -6,6 +6,38 @@
 
 .ds-option-set {
     margin-bottom: 30px;
+
+    .ds-options-list {
+        .ds-sublist-head {
+            margin-top: 1rem;
+        }
+
+        > li {
+            > a {
+                @extend .list-group-item;
+                @extend .list-group-item-action;
+            }
+        }
+    }
+
+    .ds-simple-list {
+        @extend .list-group;
+
+        margin-bottom: 15px;
+
+        > li {
+            @extend .list-group-item;
+
+            padding: 0;
+
+            > a {
+                @extend .list-group-item-action;
+
+                display: block;
+                padding: 0.75rem 1.25rem;
+            }
+        }
+    }
 }
 
 .ds-options-list {
@@ -21,25 +53,6 @@
 .ds-sublist-head {
     font-size: 1.1rem;
     text-align: center;
-}
-
-.ds-simple-list {
-    @extend .list-group;
-
-    margin-bottom: 15px;
-
-    > li {
-        @extend .list-group-item;
-
-        padding: 0;
-
-        > a {
-            @extend .list-group-item-action;
-
-            display: block;
-            padding: 0.75rem 1.25rem;
-        }
-    }
 }
 
 #ds-feed-option {
