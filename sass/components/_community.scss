@@ -2,6 +2,14 @@
     > ul {
         @extend .card-columns;
 
+        @include media-breakpoint-down(md) {
+            column-count: 2;
+        }
+
+        @include media-breakpoint-only(xs) {
+            column-count: 1;
+        }
+
         list-style: none;
         padding: 0;
 
