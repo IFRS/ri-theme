@@ -16,24 +16,41 @@
         > li {
             @extend .card;
 
-            &:hover {
-                border-color: $primary;
-            }
+            border: none;
 
             .bold {
-                @extend .card-body;
                 display: block;
 
-                a {
-                    @extend .card-link;
+                > a {
+                    @extend .btn;
+                    @extend .btn-primary;
+                    @extend .btn-block;
+
+                    padding-bottom: 25px;
+                    padding-top: 25px;
                 }
 
                 > ul {
-                    @extend .list-group;
-                    @extend .list-group-flush;
+                    list-style: none;
+                    margin: 0 auto;
+                    padding: 0;
+                    width: 80%;
 
                     > li {
-                        @extend .list-group-item;
+                        > a {
+                            @extend .btn;
+                            @extend .btn-light;
+                            @extend .btn-block;
+
+                            border-radius: 0;
+                        }
+
+                        &:last-child {
+                            > a {
+                                border-bottom-left-radius: $border-radius;
+                                border-bottom-right-radius: $border-radius;
+                            }
+                        }
                     }
                 }
             }
