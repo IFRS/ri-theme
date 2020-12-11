@@ -7,6 +7,19 @@ form.ds-interactive-div {
         flex-basis: 100%;
     }
 
+    .ds-simple-list {
+        margin-bottom: 1rem;
+    }
+
+    td {
+        .ds-text-field,
+        .ds-password-field,
+        .ds-select-field,
+        .ds-button-field {
+            margin: 5px;
+        }
+    }
+
     .ds-paragraph {
         @extend .form-group;
         @extend .form-inline;
@@ -14,6 +27,7 @@ form.ds-interactive-div {
         font-size: 0.9rem;
 
         .ds-text-field,
+        .ds-password-field,
         .ds-select-field,
         .ds-button-field {
             margin: 5px;
@@ -49,10 +63,6 @@ form.ds-interactive-div {
         }
     }
 
-    .ds-simple-list {
-        width: 100%;
-    }
-
     .ds-form-label {
         margin-right: 5px;
     }
@@ -66,9 +76,21 @@ form.ds-interactive-div {
             @extend .btn;
             @extend .btn-sm;
 
-            &[type=submit] {
+            &[type=submit]:not(.ds-add-button):not(.ds-delete-button) {
                 @extend .btn-primary;
             }
+        }
+
+        &.ds-add-button {
+            @extend .btn-success;
+
+            margin: 5px 0;
+        }
+
+        &.ds-delete-button {
+            @extend .btn-danger;
+
+            margin: 5px 0;
         }
 
         &.ds-text-field {
@@ -80,11 +102,27 @@ form.ds-interactive-div {
             @extend .form-control;
             @extend .form-control-sm;
         }
+
+        &.ds-file-field {
+            @extend .form-control-file;
+            @extend .form-control-sm;
+        }
     }
 
     select.ds-select-field {
         @extend .form-control;
         @extend .form-control-sm;
+    }
+
+    textarea.ds-textarea-field {
+        @extend .form-control;
+        @extend .form-control-sm;
+    }
+
+    .ds-checkbox-field {
+        > legend {
+            @extend .sr-only;
+        }
     }
 
     .hidden {
