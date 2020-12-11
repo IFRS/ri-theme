@@ -1,0 +1,30 @@
+.ds-simple-list {
+    &:not(#aspect_administrative_ControlPanel_list_options) {
+        @extend .list-group;
+
+        .ds-simple-list-item {
+            @extend .list-group-item;
+        }
+    }
+
+    &#aspect_administrative_ControlPanel_list_options {
+        @extend .nav;
+        @extend .nav-pills;
+
+        margin-bottom: 15px;
+
+        .ds-simple-list-item {
+            @extend .nav-item;
+
+            a {
+                @extend .nav-link;
+            }
+
+            span.bold {
+                a {
+                    @extend .active;
+                }
+            }
+        }
+    }
+}
