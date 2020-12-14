@@ -58,7 +58,6 @@
 }
 
 #ds-feed-option {
-    padding-left: 2px;
     text-align: center;
 
     ul {
@@ -73,7 +72,21 @@
     }
 
     a {
-        background-position: left center !important;
-        padding-left: 1.25rem;
+        @include icon-feed($gray-900);
+
+        background-color: #ffffff;
+        background-position: 0.25rem center;
+        background-size: 1rem;
+        border: 1px solid $gray-200;
+        color: $cor-feed;
+        display: block;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem 0.25rem 1.5rem;
+
+        &:hover {
+            background-color: $cor-feed;
+            color: #ffffff;
+            text-decoration: none;
+        }
     }
 }
