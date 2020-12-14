@@ -40,12 +40,12 @@
                 </a>
             </div>
             <div id="ds-footer-credits">
-                 <!-- Wordpress -->
+                 <!-- DSpace -->
                 <a href="https://duraspace.org/dspace/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Desenvolvido com DSpace">
                     <img src="{concat($theme-path, '/images/creditos-dspace.png')}" alt="Desenvolvido com DSpace (abre uma nova página)"/>
                 </a>
                 <!-- Código-fonte -->
-                <a href="https://github.com/IFRS/ri-theme/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="bottom" title="Código-fonte deste tema">
+                <a href="https://github.com/IFRS/ri-theme/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Código-fonte deste tema">
                     <img src="{concat($theme-path, '/images/creditos-git.png')}" alt="Código-fonte deste tema (abre uma nova página)"/>
                 </a>
             </div>
