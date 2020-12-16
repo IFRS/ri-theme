@@ -13,68 +13,10 @@
     exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
 
     <xsl:import href="../dri2xhtml.xsl"/>
+
+    <xsl:import href="lib/xsl/header.xsl"/>
+    <xsl:import href="lib/xsl/feed.xsl"/>
+    <xsl:import href="lib/xsl/footer.xsl"/>
+
     <xsl:output indent="yes"/>
-
-    <xsl:template name="addRSSLinks">
-        <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
-            <li>
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="."/>
-                    </xsl:attribute>
-                    <xsl:choose>
-                        <xsl:when test="contains(., 'rss_1.0')">
-                            <xsl:text>RSS 1.0</xsl:text>
-                        </xsl:when>
-                        <xsl:when test="contains(., 'rss_2.0')">
-                            <xsl:text>RSS 2.0</xsl:text>
-                        </xsl:when>
-                        <xsl:when test="contains(., 'atom_1.0')">
-                            <xsl:text>Atom</xsl:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="@qualifier"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </a>
-            </li>
-        </xsl:for-each>
-    </xsl:template>
-
-    <xsl:template name="buildFooter">
-        <div id="ds-footer">
-            <div id="ds-footer-logo">
-                <a href="https://ifrs.edu.br/" data-toggle="tooltip" data-placement="top" title="Portal do IFRS">
-                    <img src="{concat($theme-path, '/images/ifrs.png')}"/>
-                </a>
-            </div>
-            <div id="ds-footer-links">
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-                        <xsl:text>/contact</xsl:text>
-                    </xsl:attribute>
-                    <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text>
-                </a>
-                <xsl:text> | </xsl:text>
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-                        <xsl:text>/feedback</xsl:text>
-                    </xsl:attribute>
-                    <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
-                </a>
-            </div>
-            <div id="ds-footer-credits">
-                 <!-- DSpace -->
-                <a href="https://duraspace.org/dspace/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Desenvolvido com DSpace">
-                    <img src="{concat($theme-path, '/images/creditos-dspace.png')}" alt="Desenvolvido com DSpace (abre uma nova página)"/>
-                </a>
-                <!-- Código-fonte -->
-                <a href="https://github.com/IFRS/ri-theme/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Código-fonte deste tema">
-                    <img src="{concat($theme-path, '/images/creditos-git.png')}" alt="Código-fonte deste tema (abre uma nova página)"/>
-                </a>
-            </div>
-        </div>
-    </xsl:template>
 </xsl:stylesheet>
