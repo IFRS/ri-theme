@@ -1,9 +1,27 @@
 .ds-simple-list {
-    &:not(#aspect_administrative_ControlPanel_list_options) {
+    &:not(#aspect_administrative_ControlPanel_list_options):not(.alphabet) {
         @extend .list-group;
 
         .ds-simple-list-item {
             @extend .list-group-item;
+        }
+    }
+
+    &.alphabet {
+        list-style: none;
+        padding: 0;
+
+        @include media-breakpoint-up(sm) {
+            column-count: 2;
+        }
+
+        @include media-breakpoint-up(lg) {
+            column-count: 4;
+        }
+
+        a {
+            @extend .btn;
+            @extend .btn-link;
         }
     }
 
