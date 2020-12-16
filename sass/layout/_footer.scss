@@ -16,8 +16,7 @@
 }
 
 #ds-footer-logo {
-    flex: 0 0 150px;
-    margin-right: 15px;
+    flex: 0 0 100px;
 
     a {
         display: block;
@@ -34,7 +33,7 @@
 }
 
 #ds-footer-credits {
-    flex: 0 1 auto;
+    flex: 0 0 100px;
 
     display: flex;
     flex-direction: column;
@@ -42,11 +41,11 @@
     align-items: center;
     justify-content: space-between;
 
-    > * {
-        margin-bottom: 30px;
+    img {
+        @extend .img-fluid;
+    }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+    > *:not(:last-child) {
+        margin-bottom: 30px;
     }
 }
