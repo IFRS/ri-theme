@@ -1,9 +1,13 @@
 .ds-simple-list {
-    &:not(#aspect_administrative_ControlPanel_list_options):not(.alphabet) {
+    &:not(.alphabet):not(.community-browse):not(.collection-browse):not(#aspect_administrative_ControlPanel_list_options) {
         @extend .list-group;
 
         .ds-simple-list-item {
             @extend .list-group-item;
+
+            > .ds-simple-list {
+                margin-top: 1rem;
+            }
         }
     }
 
@@ -11,17 +15,34 @@
         list-style: none;
         padding: 0;
 
-        @include media-breakpoint-up(sm) {
-            column-count: 2;
-        }
+        .ds-simple-list-item {
+            display: inline-block;
+            margin-bottom: 5px;
 
-        @include media-breakpoint-up(lg) {
-            column-count: 4;
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
         }
 
         a {
             @extend .btn;
             @extend .btn-link;
+        }
+    }
+
+    &.community-browse,
+    &.collection-browse {
+        @extend .nav;
+        @extend .nav-pills;
+
+        margin-bottom: 15px;
+
+        .ds-simple-list-item {
+            @extend .nav-item;
+
+            a {
+                @extend .nav-link;
+            }
         }
     }
 
