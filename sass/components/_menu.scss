@@ -29,13 +29,16 @@
         > li {
             @extend .list-group-item;
 
-            padding: 0;
+            font-weight: 600;
 
             > a {
                 @extend .list-group-item-action;
 
                 display: block;
+                font-weight: normal;
+                margin: -0.75rem -1.25rem;
                 padding: 0.75rem 1.25rem;
+                width: auto;
             }
         }
     }
