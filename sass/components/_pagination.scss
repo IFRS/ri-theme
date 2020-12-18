@@ -1,3 +1,19 @@
 .pagination-info {
     font-size: 0.9rem;
 }
+
+.pagination-links {
+    @extend .pagination;
+
+    > li {
+        @extend .page-item;
+
+        &.current-page-link {
+            @extend .active;
+        }
+
+        > a {
+            @extend .page-link;
+        }
+    }
+}
