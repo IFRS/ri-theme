@@ -14,6 +14,7 @@
 
     <xsl:import href="../dri2xhtml.xsl"/>
 
+    <xsl:import href="lib/xsl/head.xsl"/>
     <xsl:import href="lib/xsl/header.xsl"/>
     <xsl:import href="lib/xsl/feed.xsl"/>
     <xsl:import href="lib/xsl/footer.xsl"/>
