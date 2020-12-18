@@ -21,6 +21,20 @@
             <meta name="robots" content="index,follow"></meta>
             <meta name="author" content="Departamento de Comunicação do IFRS"></meta>
 
+            <!-- Favicon -->
+            <link rel="apple-touch-icon" sizes="180x180" href="{concat($theme-path, '/images/favicon/apple-touch-icon.png')}"></link>
+            <link rel="icon" type="image/png" sizes="32x32" href="{concat($theme-path, '/images/favicon/favicon-32x32.png')}"></link>
+            <link rel="icon" type="image/png" sizes="194x194" href="{concat($theme-path, '/images/favicon/favicon-194x194.png')}"></link>
+            <link rel="icon" type="image/png" sizes="192x192" href="{concat($theme-path, '/images/favicon/android-chrome-192x192.png')}"></link>
+            <link rel="icon" type="image/png" sizes="16x16" href="{concat($theme-path, '/images/favicon/favicon-16x16.png')}"></link>
+            <link rel="manifest" href="{concat($theme-path, '/images/favicon/site.webmanifest')}"></link>
+            <link rel="mask-icon" href="{concat($theme-path, '/images/favicon/safari-pinned-tab.svg')}" color="#2d8ecb"></link>
+            <meta name="apple-mobile-web-app-title" content="Repositório Institucional do IFRS"></meta>
+            <meta name="application-name" content="Repositório Institucional do IFRS"></meta>
+            <meta name="msapplication-TileColor" content="#2d8ecb"></meta>
+            <meta name="msapplication-TileImage" content="{concat($theme-path, '/images/favicon/mstile-144x144.png')}"></meta>
+            <meta name="theme-color" content="#2d8ecb"></meta>
+
             <!-- Contexto Barra Brasil -->
             <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/100918"></meta>
 
