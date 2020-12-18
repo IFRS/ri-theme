@@ -1,3 +1,12 @@
+*,
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 /* open-sans-300 - latin */
 @font-face {
     font-display: swap;
@@ -13,8 +22,8 @@
         url('../fonts/open-sans-v18-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-300italic - latin */
-  @font-face {
+/* open-sans-300italic - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: italic;
@@ -28,8 +37,8 @@
         url('../fonts/open-sans-v18-latin-300italic.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-regular - latin */
-  @font-face {
+/* open-sans-regular - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: normal;
@@ -43,8 +52,8 @@
         url('../fonts/open-sans-v18-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-italic - latin */
-  @font-face {
+/* open-sans-italic - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: italic;
@@ -58,8 +67,8 @@
         url('../fonts/open-sans-v18-latin-italic.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-600 - latin */
-  @font-face {
+/* open-sans-600 - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: normal;
@@ -73,8 +82,8 @@
         url('../fonts/open-sans-v18-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-600italic - latin */
-  @font-face {
+/* open-sans-600italic - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: italic;
@@ -88,8 +97,8 @@
         url('../fonts/open-sans-v18-latin-600italic.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-700 - latin */
-  @font-face {
+/* open-sans-700 - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: normal;
@@ -103,8 +112,8 @@
         url('../fonts/open-sans-v18-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-700italic - latin */
-  @font-face {
+/* open-sans-700italic - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: italic;
@@ -118,8 +127,8 @@
         url('../fonts/open-sans-v18-latin-700italic.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-800 - latin */
-  @font-face {
+/* open-sans-800 - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: normal;
@@ -133,8 +142,8 @@
         url('../fonts/open-sans-v18-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-  /* open-sans-800italic - latin */
-  @font-face {
+/* open-sans-800italic - latin */
+@font-face {
     font-display: swap;
     font-family: 'Open Sans';
     font-style: italic;
