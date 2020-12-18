@@ -25,8 +25,10 @@
 #ds-user-box {
     @extend .btn-group;
 
-    position: absolute;
-    top: 30px; right: 15px;
+    @include media-breakpoint-up(sm) {
+        position: absolute;
+        top: 30px; right: 15px;
+    }
 }
 
 #ds-user-login {
