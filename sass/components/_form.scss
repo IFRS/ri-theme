@@ -52,6 +52,10 @@ form.ds-interactive-div {
 
         .ds-form-content {
             @extend .col-lg-9;
+
+            input + input {
+                margin-top: 5px;
+            }
         }
     }
 
