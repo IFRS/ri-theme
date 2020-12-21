@@ -1,6 +1,7 @@
 #ds-header {
     @extend .col-12;
 
+    margin-top: 32px;
     padding-bottom: 30px;
     padding-top: 30px;
     position: relative;
@@ -14,7 +15,7 @@
 #ds-header-logo {
     @extend .img-fluid;
 
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
     margin-right: 30px;
 }
 
