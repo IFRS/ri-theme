@@ -9,14 +9,8 @@
 
 #ds-header-link {
     display: inline-block;
-    max-width: 516px;
-}
-
-#ds-header-logo {
-    @extend .img-fluid;
-
     margin-bottom: 1rem;
-    margin-right: 30px;
+    max-width: 516px;
 }
 
 #ds-static-pagetitle {

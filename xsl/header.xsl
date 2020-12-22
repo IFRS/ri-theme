@@ -19,7 +19,7 @@
                     <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                     <xsl:text>/</xsl:text>
                 </xsl:attribute>
-                <img src="{concat($theme-path, '/images/ri-ifrs.png')}" alt="Página Inicial" id="ds-header-logo"/>
+                <img src="{concat($theme-path, '/images/ri-ifrs.png')}" alt="Página Inicial" class="img-fluid"/>
             </a>
 
             <xsl:choose>
