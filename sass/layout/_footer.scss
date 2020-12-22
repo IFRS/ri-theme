@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 30px;
 
     > * {
@@ -17,6 +18,10 @@
 
 #ds-footer-logo {
     flex: 0 0 100px;
+
+    @include media-breakpoint-down(sm) {
+        order: 1;
+    }
 
     a {
         display: block;
@@ -30,6 +35,10 @@
 #ds-footer-links {
     flex: 1 1 auto;
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+        order: 2;
+    }
 }
 
 #ds-footer-credits {
@@ -40,6 +49,10 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+        order: 1;
+    }
 
     img {
         @extend .img-fluid;
