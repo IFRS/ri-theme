@@ -8,8 +8,10 @@
     .ds-text-field {
         @extend .form-control;
 
-        display: inline-block;
-        width: auto;
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            width: 80%;
+        }
     }
 
     input[type=radio] {
@@ -22,11 +24,18 @@
 
         @include icon-search(#ffffff);
 
+        display: block;
+        margin: 5px 0;
         height: 38px;
         width: 38px;
 
         /* Hide text */
         font-size: 0;
         line-height: 0;
+
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            margin: 0;
+        }
     }
 }
