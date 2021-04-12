@@ -2,11 +2,9 @@
     > ul {
         @extend .card-columns;
 
-        @include media-breakpoint-down(md) {
-            column-count: 2;
-        }
+        column-count: 2;
 
-        @include media-breakpoint-only(xs) {
+        @include media-breakpoint-down(md) {
             column-count: 1;
         }
 
@@ -24,35 +22,40 @@
                 > a {
                     @extend .btn;
                     @extend .btn-primary;
-                    @extend .btn-block;
 
-                    padding-bottom: 25px;
-                    padding-top: 25px;
+                    margin-bottom: 2px;
                 }
 
                 > ul {
+                    border-left: 2px solid $gray-600;
                     list-style: none;
-                    margin: 0 auto;
-                    padding: 0;
-                    width: 80%;
+                    margin-left: 2px;
+                    padding-left: 0;
+                    padding-top: 5px;
 
                     > li {
+                        padding-left: 25px;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: -5px; left: -2px;
+                            width: 20px; height: 1em; height: calc(1em + 5px);
+                            border-left: 2px solid $gray-600;
+                            border-bottom: 2px solid $gray-600;
+                        }
+
                         > a {
                             @extend .btn;
                             @extend .btn-light;
-                            @extend .btn-block;
-
-                            border-radius: 0;
-                        }
-
-                        &:last-child {
-                            > a {
-                                border-bottom-left-radius: $border-radius;
-                                border-bottom-right-radius: $border-radius;
-                            }
                         }
                     }
                 }
+            }
+
+            ul:last-child {
+               border-left-color: transparent;
             }
         }
     }
