@@ -16,7 +16,7 @@
         <div id="ds-footer">
             <div id="ds-footer-logo">
                 <a href="https://ifrs.edu.br/" data-toggle="tooltip" data-placement="top" title="Portal do IFRS">
-                    <img src="{concat($theme-path, '/images/ifrs.png')}"/>
+                    <img src="{concat($theme-path, '/images/ifrs.png')}" alt="Portal do IFRS"/>
                 </a>
             </div>
             <div id="ds-footer-links">
