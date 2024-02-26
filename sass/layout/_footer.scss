@@ -39,6 +39,16 @@
     @include media-breakpoint-down(sm) {
         order: 2;
     }
+
+    img {
+        @extend .img-fluid;
+    }
+
+    &-sibifrs {
+        display: block;
+        margin-inline: auto;
+        margin-block-start: 2rem;
+    }
 }
 
 #ds-footer-credits {

@@ -35,6 +35,9 @@
                     </xsl:attribute>
                     <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
                 </a>
+                <a id="ds-footer-links-sibifrs" href="https://ifrs.edu.br/ensino/bibliotecas/repositorio-institucional/" data-toggle="tooltip" data-placement="top" title="Sistema de Bibliotecas do IFRS">
+                    <img src="{concat($theme-path, '/images/sibifrs.png')}" alt="Sistema de Bibliotecas do IFRS - SIBIFRS"/>
+                </a>
             </div>
             <div id="ds-footer-credits">
                     <!-- DSpace -->
