@@ -8,23 +8,18 @@
     "autoprefixer": "^10.2.6",
     "bootstrap": "^4.6.0",
     "del": "^6.0.0",
-    "flexibility": "^2.0.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-csso": "^4.0.1",
-    "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "html5shiv": "^3.7.3",
     "jquery": "^3.6.0",
     "lazysizes": "^5.3.2",
     "picturefill": "^3.0.3",
-    "pixrem": "^5.0.0",
     "postcss": "^8.3.0",
-    "postcss-flexibility": "^2.0.0",
-    "respond.js": "^1.4.2",
+    "sass": "^1.71.1",
     "webpack": "^5.37.1"
-  },
-  "dependencies": {}
+  }
 }

@@ -4,9 +4,8 @@ const csso                 = require('gulp-csso');
 const del                  = require('del');
 const gulp                 = require('gulp');
 const path                 = require('path');
-const pixrem               = require('pixrem');
 const postcss              = require('gulp-postcss');
-const sass                 = require('gulp-sass');
+const sass                 = require('gulp-sass')(require('sass'));
 const sourcemaps           = require('gulp-sourcemaps');
 const uglify               = require('gulp-uglify');
 const webpack              = require('webpack');
@@ -19,8 +18,6 @@ gulp.task('clean', async function() {
 
 gulp.task('sass', function() {
     let postCSSplugins = [
-        require('postcss-flexibility'),
-        pixrem(),
         autoprefixer(),
     ];
 
@@ -47,7 +44,6 @@ gulp.task('webpack', function(done) {
         mode: 'production',
         devtool: 'source-map',
         entry: {
-            'script-ie': './src/script-ie.js',
             'script': './src/script.js',
         },
         output: {
@@ -104,9 +100,7 @@ gulp.task('scripts', gulp.series('webpack', function js() {
             ]
         ]
     }))
-    .pipe(uglify({
-        ie8: true,
-    }))
+    .pipe(uglify())
     .pipe(gulp.dest('dist/lib/js/'));
 }));
 
