@@ -63,7 +63,6 @@
                             <map:parameter name="stylesheet.screen#2" value="lib/css/style.css"/>
 
                             <map:parameter name="javascript#1" value="lib/js/commons.js"/>
-                            <map:parameter name="javascript#2" value="lib/js/script-ie.js"/>
                             <map:parameter name="javascript#3" value="lib/js/script.js"/>
 
                             <map:parameter name="theme.path" value="{global:theme-path}"/>
